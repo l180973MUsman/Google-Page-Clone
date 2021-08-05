@@ -1,0 +1,124 @@
+<html>
+    
+        <title>Google</title>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+
+    <header>
+        <link rel="stylesheet" href="style.css">
+        <div class = "header">
+        <ul style="list-style-type:none;">
+            <li><img class="profile" src="passport size photo.jpeg" title="profile pic" width="20px" height="1"></li>
+            <li><a class="gb_C" aria-label="Google apps" href="https://www.google.com.pk/intl/en/about/products" aria-expanded="false" role="button" tabindex="0"><svg class="gb_Ve" focusable="false" viewBox="0 0 24 24"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg></a></li>
+            <li><a href="#Images">Images</a></li>
+            <li><a href="#Gmail">Gmail</a></li>
+         
+        </ul>
+        </div>
+    </header>
+    <center>
+    <body>
+
+           <div class = "logo">
+             <img src="googleImg.png">    
+           </div>
+           <div class="searchbar">
+               <img class="searchlogo" src="search-removebg-preview.png" title="Search logo" width="20px" height="1">
+               <input class="search" id = "text" type="text" title="Search">
+               <a href="#"> <img class="voice" src="voice.png" title="Search by Voice"></a>
+               
+           </div>
+           <div>
+            <button class="button" id = "btn" type="button">Google Search</button>
+            <button class="button" type="button">I'm Feeling Lucky</button>
+           </div>
+           <div class = "language">
+               <p style="color:rgb(56, 56, 56);">Google offered in:
+               <a href="#Urdu">اُردُو</a>  
+               <a href="#Hindi">हिन्दी</a>
+               <a href="#Pashto">پشتو</a>
+               <a href="#Sindhi">سنڌي</a>
+               </p>
+           </div>
+        </center>   
+           <div class = "Bottom">
+            <div class = "footerText">
+               Pakistan
+            </div>
+            <div class = "footer">
+            <ul style="list-style-type:none;">
+                <li><a href="#About">About</a></li>
+                <li><a href="#Advertising">Advertising</a></li>
+                <li><a href="#Business">Business</a></li>
+                <li><a href="#How Search Works">How Search Works</a></li>
+            </ul>
+            </div>
+           </div>
+           <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p id="p">Search: </p>
+            </div>
+          
+          </div>
+
+           
+           <script>
+            
+            // Get the modal
+                var modal = document.getElementById("myModal");
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("btn");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                modal.style.display = "block";
+                var paragraph = document.getElementById("p");
+                var text = document.createTextNode(document.getElementById("text").value);
+
+                paragraph.appendChild(text);
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+                }
+
+                const input = document.getElementById("text");
+                input.addEventListener("keyup", function(event) {
+                // Number 13 is the "Enter" key on the keyboard
+                if (event.key === "Enter") {
+                    // Cancel the default action, if needed
+                    event.preventDefault();
+                    // Trigger the button element with a click
+                    var btn = document.getElementById("btn").click();
+                    btn.onclick = function() {
+                    modal.style.display = "block";
+                    var paragraph = document.getElementById("p");
+                    var text = document.createTextNode(document.getElementById("text").value);
+
+                    paragraph.appendChild(text);
+                }
+                    
+                }
+                });
+            </script>
+             
+
+
+    </body>
+</html>
